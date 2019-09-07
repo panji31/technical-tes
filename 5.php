@@ -7,5 +7,5 @@ function count_handshake($jumlah){
 	}
 	return $temp; 
 }
-echo count_handshake(3);
-?>      
+echo "result ".count_handshake(6);
+?>

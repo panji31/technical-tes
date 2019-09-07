@@ -18,5 +18,6 @@ function drawImage($jumlah){
 		echo "<br>";
 	}
 }
+//masukan angka ganjil
 drawImage(5);
-?>      
+?>

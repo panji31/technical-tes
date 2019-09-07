@@ -1,8 +1,9 @@
- <?php
+<?php
 function hitungKembalian($uang_belanja,$uang_konsumen){
 	if($uang_konsumen==$uang_belanja){
 		echo "tidak kembalian";
-	}else{
+	}
+	else if($uang_konsumen > $uang_belanja){
 		$satuan = array("kosong","se","dua ","tiga ","empat ","lima ","enam ","tujuh ","delapan ","sembilan ");
 		$uang = array(50000,20000,10000,5000,2000,1000,500);
 		$kembalian= $uang_konsumen-$uang_belanja;
@@ -17,16 +18,20 @@ function hitungKembalian($uang_belanja,$uang_konsumen){
 					$kata = "koin";
 				}
 				echo $satuan[floor($div)].$kata."*".$value;
+				echo "</br>";
 				$kembalian = $kembalian - $sisa;
 			}
-			echo "</br>";
+			
 			if($kembalian < 100){
 				break;
 			}
 		}
 	}
+	else{
+		echo "eror";
+	}
 }
 
 
-hitungKembalian(15500, 50000);
-?> 
+hitungKembalian(15500, 50000); 
+?>
